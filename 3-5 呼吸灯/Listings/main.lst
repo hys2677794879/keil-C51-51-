@@ -1,0 +1,271 @@
+C51 COMPILER V9.54   MAIN                                                                  12/16/2022 20:59:55 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.l
+                    -st) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include <INTRINS.H>
+   3          void Delay(unsigned int xms)    //@11.0592MHz
+   4          {
+   5   1        unsigned char i, j;
+   6   1        while (xms)
+   7   1        { 
+   8   2        _nop_();
+   9   2        i = 2;
+  10   2        j = 199;
+  11   2        do
+  12   2        {
+  13   3          while (--j);
+  14   3        } while (--i);
+  15   2      
+  16   2        xms--;
+  17   2        }
+  18   1      }
+  19          
+  20          void main ()
+  21          {
+  22   1        unsigned int time ;
+  23   1        
+  24   1          while (1)
+  25   1          {
+  26   2            for ( time= 0 ; time < 100 ; time ++)
+  27   2            {
+  28   3              P2_0 = 0;
+  29   3              Delay (time/4);
+  30   3              P2_0 = 1;
+  31   3              Delay ((100 - time)/4);
+  32   3            
+  33   3            }
+  34   2            for ( time= 100 ; time > 0 ; time --)
+  35   2            {
+  36   3              P2_0 = 0;
+  37   3              Delay (time);
+  38   3              P2_0 = 1;
+  39   3              Delay ((100 - time)/4);
+  40   3            
+  41   3            }
+  42   2            for ( time= 0 ; time < 100 ; time ++)
+  43   2            {
+  44   3              P2_1 = 0;
+  45   3              Delay (time/4);
+  46   3              P2_1 = 1;
+  47   3              Delay ((100 - time)/4);
+  48   3            
+  49   3            }
+  50   2            for ( time= 100 ; time > 0 ; time --)
+  51   2            {
+  52   3              P2_1 = 0;
+  53   3              Delay (time/4);
+  54   3              P2_1 = 1;
+C51 COMPILER V9.54   MAIN                                                                  12/16/2022 20:59:55 PAGE 2   
+
+  55   3              Delay ((100 - time)/4);
+  56   3            
+  57   3            } 
+  58   2            for ( time= 0 ; time < 100 ; time ++)
+  59   2            {
+  60   3              P2_2 = 0;
+  61   3              Delay (time/4);
+  62   3              P2_2 = 1;
+  63   3              Delay ((100 - time)/4);
+  64   3            
+  65   3            }
+  66   2            for ( time= 100 ; time > 0 ; time --)
+  67   2            {
+  68   3              P2_2 = 0;
+  69   3              Delay (time/4);
+  70   3              P2_2 = 1;
+  71   3              Delay ((100 - time)/4);
+  72   3            
+  73   3            } 
+  74   2            for ( time= 0 ; time < 100 ; time ++)
+  75   2            {
+  76   3              P2_3 = 0;
+  77   3              Delay (time/4);
+  78   3              P2_3 = 1;
+  79   3              Delay ((100 - time)/4);
+  80   3            
+  81   3            }
+  82   2            for ( time= 100 ; time > 0 ; time --)
+  83   2            {
+  84   3              P2_3 = 0;
+  85   3              Delay (time/4);
+  86   3              P2_3 = 1;
+  87   3              Delay ((100 - time)/4);
+  88   3            
+  89   3            } 
+  90   2            for ( time= 0 ; time < 100 ; time ++)
+  91   2            {
+  92   3              P2_4 = 0;
+  93   3              Delay (time/4);
+  94   3              P2_4 = 1;
+  95   3              Delay ((100 - time)/4);
+  96   3            
+  97   3            }
+  98   2            for ( time= 100 ; time > 0 ; time --)
+  99   2            {
+ 100   3              P2_4 = 0;
+ 101   3              Delay (time/4);
+ 102   3              P2_4 = 1;
+ 103   3              Delay ((100 - time)/4);
+ 104   3            
+ 105   3            } 
+ 106   2            for ( time= 0 ; time < 100 ; time ++)
+ 107   2            {
+ 108   3              P2_5 = 0;
+ 109   3              Delay (time/4);
+ 110   3              P2_5 = 1;
+ 111   3              Delay ((100 - time)/4);
+ 112   3            
+ 113   3            }
+ 114   2            for ( time= 100 ; time > 0 ; time --)
+ 115   2            {
+ 116   3              P2_5 = 0;
+C51 COMPILER V9.54   MAIN                                                                  12/16/2022 20:59:55 PAGE 3   
+
+ 117   3              Delay (time/4);
+ 118   3              P2_5 = 1;
+ 119   3              Delay ((100 - time)/4);
+ 120   3            
+ 121   3            } 
+ 122   2            for ( time= 0 ; time < 100 ; time ++)
+ 123   2            {
+ 124   3              P2_6 = 0;
+ 125   3              Delay (time/4);
+ 126   3              P2_6 = 1;
+ 127   3              Delay ((100 - time)/4);
+ 128   3            
+ 129   3            }
+ 130   2            for ( time= 100 ; time > 0 ; time --)
+ 131   2            {
+ 132   3              P2_6 = 0;
+ 133   3              Delay (time/4);
+ 134   3              P2_6 = 1;
+ 135   3              Delay ((100 - time)/4);
+ 136   3            
+ 137   3            } 
+ 138   2            for ( time= 0 ; time < 100 ; time ++)
+ 139   2            {
+ 140   3              P2_7 = 0;
+ 141   3              Delay (time/4);
+ 142   3              P2_7 = 1;
+ 143   3              Delay ((100 - time)/4);
+ 144   3            
+ 145   3            }
+ 146   2            for ( time= 100 ; time > 0 ; time --)
+ 147   2            {
+ 148   3              P2_7 = 0;
+ 149   3              Delay (time/4);
+ 150   3              P2_7 = 1;
+ 151   3              Delay ((100 - time)/4);
+ 152   3            
+ 153   3            }
+ 154   2            for ( time= 0 ; time < 100 ; time ++)
+ 155   2            {
+ 156   3              P2_6 = 0;
+ 157   3              Delay (time/4);
+ 158   3              P2_6 = 1;
+ 159   3              Delay ((100 - time)/4);
+ 160   3            
+ 161   3            }
+ 162   2            for ( time= 100 ; time > 0 ; time --)
+ 163   2            {
+ 164   3              P2_6 = 0;
+ 165   3              Delay (time/4);
+ 166   3              P2_6 = 1;
+ 167   3              Delay ((100 - time)/4);
+ 168   3            
+ 169   3            } 
+ 170   2            for ( time= 0 ; time < 100 ; time ++)
+ 171   2            {
+ 172   3              P2_5 = 0;
+ 173   3              Delay (time/4);
+ 174   3              P2_5 = 1;
+ 175   3              Delay ((100 - time)/4);
+ 176   3            
+ 177   3            }
+ 178   2            for ( time= 100 ; time > 0 ; time --)
+C51 COMPILER V9.54   MAIN                                                                  12/16/2022 20:59:55 PAGE 4   
+
+ 179   2            {
+ 180   3              P2_5 = 0;
+ 181   3              Delay (time/4);
+ 182   3              P2_5 = 1;
+ 183   3              Delay ((100 - time)/4);
+ 184   3            
+ 185   3            } 
+ 186   2            for ( time= 0 ; time < 100 ; time ++)
+ 187   2            {
+ 188   3              P2_4 = 0;
+ 189   3              Delay (time/4);
+ 190   3              P2_4 = 1;
+ 191   3              Delay ((100 - time)/4);
+ 192   3            
+ 193   3            }
+ 194   2            for ( time= 100 ; time > 0 ; time --)
+ 195   2            {
+ 196   3              P2_4 = 0;
+ 197   3              Delay (time/4);
+ 198   3              P2_4 = 1;
+ 199   3              Delay ((100 - time)/4);
+ 200   3            
+ 201   3            }
+ 202   2            for ( time= 0 ; time < 100 ; time ++)
+ 203   2            {
+ 204   3              P2_3 = 0;
+ 205   3              Delay (time/4);
+ 206   3              P2_3 = 1;
+ 207   3              Delay ((100 - time)/4);
+ 208   3            
+ 209   3            }
+ 210   2            for ( time= 100 ; time > 0 ; time --)
+ 211   2            {
+ 212   3              P2_3 = 0;
+ 213   3              Delay (time/4);
+ 214   3              P2_3 = 1;
+ 215   3              Delay ((100 - time)/4);
+ 216   3            
+ 217   3            }
+ 218   2            for ( time= 0 ; time < 100 ; time ++)
+ 219   2            {
+ 220   3              P2_2 = 0;
+ 221   3              Delay (time/4);
+ 222   3              P2_2 = 1;
+ 223   3              Delay ((100 - time)/4);
+ 224   3            
+ 225   3            }
+ 226   2            for ( time= 100 ; time > 0 ; time --)
+ 227   2            {
+ 228   3              P2_2 = 0;
+ 229   3              Delay (time/4);
+ 230   3              P2_2 = 1;
+ 231   3              Delay ((100 - time)/4);
+ 232   3            
+ 233   3            } 
+ 234   2          }
+ 235   1        
+ 236   1        
+ 237   1        
+ 238   1        
+ 239   1      }
+
+C51 COMPILER V9.54   MAIN                                                                  12/16/2022 20:59:55 PAGE 5   
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1465    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
