@@ -1,0 +1,108 @@
+C51 COMPILER V9.54   MAIN                                                                  12/16/2022 22:59:48 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.l
+                    -st) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          void Delay1ms(unsigned int xms)   //@12.000MHz
+   3          {
+   4   1        unsigned char i, j;
+   5   1          while (xms)
+   6   1        {
+   7   2          i = 2;
+   8   2          j = 239;
+   9   2          do
+  10   2         {
+  11   3          while (--j);
+  12   3        } while (--i);
+  13   2      
+  14   2            xms--;
+  15   2        }
+  16   1      }
+  17          
+  18          
+  19          void main ()
+  20          {
+  21   1        int num1 = 0;
+  22   1        
+  23   1        while (1)
+  24   1        {
+  25   2          if ( P3_1 == 0)
+  26   2          {
+  27   3            Delay1ms(20);
+  28   3            while ( P3_1 == 0)
+  29   3            Delay1ms(20);
+  30   3          
+  31   3            P2 = 0xFE;    //1111 1110
+  32   3            Delay1ms(100);
+  33   3            P2 = 0xFD;    //1111 1101
+  34   3            Delay1ms(100);
+  35   3            P2 = 0xFB;    //1111 1011
+  36   3            Delay1ms(100);
+  37   3            P2 = 0xF7;    //1111 0111
+  38   3            Delay1ms(100);
+  39   3            P2 = 0xEF;    //1110 1111
+  40   3            Delay1ms(100);
+  41   3            P2 = 0xDF;    //1101 1111
+  42   3            Delay1ms(100);
+  43   3            P2 = 0xBF;    //1011 1111
+  44   3            Delay1ms(100);
+  45   3            P2 = 0x7F;    //0111 1111
+  46   3            Delay1ms(100);
+  47   3            P2 = 0xBF;    //1011 1111
+  48   3            Delay1ms(100);
+  49   3            P2 = 0xDF;    //1101 1111
+  50   3            Delay1ms(100);
+  51   3            P2 = 0xEF;    //1110 1111
+  52   3            Delay1ms(100);
+  53   3            P2 = 0xF7;    //1111 0111
+  54   3            Delay1ms(100);
+C51 COMPILER V9.54   MAIN                                                                  12/16/2022 22:59:48 PAGE 2   
+
+  55   3            P2 = 0xFB;    //1111 1011
+  56   3            Delay1ms(100);
+  57   3            P2 = 0xFD;    //1111 1101
+  58   3            Delay1ms(100);
+  59   3            
+  60   3      
+  61   3          
+  62   3          }
+  63   2      
+  64   2          if (P3_0 == 0)
+  65   2          {
+  66   3              Delay1ms(20);
+  67   3              while ( P3_1 == 0)
+  68   3              Delay1ms(20);
+  69   3      
+  70   3              for ( num1 = 1; num1 < 101; num1 ++)
+  71   3              {
+  72   4                  P2 = 0x00;    
+  73   4                  Delay1ms(50);
+  74   4                  P2 = 0xFF;    
+  75   4                  Delay1ms(50);
+  76   4              }
+  77   3          
+  78   3          }
+  79   2            
+  80   2        }
+  81   1      
+  82   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    184    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

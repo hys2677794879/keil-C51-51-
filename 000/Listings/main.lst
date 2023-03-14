@@ -1,0 +1,65 @@
+C51 COMPILER V9.54   MAIN                                                                  02/26/2023 01:10:41 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.l
+                    -st) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<REGX52.H>
+   2          #include<INTRINS.H>
+   3          
+   4          void Delay(unsigned int xms )   //@12.000MHz
+   5          {
+   6   1        unsigned char i, j;
+   7   1      
+   8   1        i = 2;
+   9   1        j = 239;
+  10   1        do
+  11   1        {
+  12   2          while (--j);
+  13   2        } while (--i);
+  14   1      }
+*** WARNING C280 IN LINE 4 OF main.c: 'xms': unreferenced local variable
+  15          
+  16          int i = 0;
+  17          int num1 = 0;
+  18          int num2 = 1000;
+  19          
+  20          void main()
+  21          {
+  22   1          while(1)
+  23   1        {
+  24   2          if (P3_1 == 0)
+  25   2          {
+  26   3            Delay(20);
+  27   3            while(P3_1 == 0);//°´¼üÏû¶¶
+  28   3            Delay(20);
+  29   3            
+  30   3            
+  31   3            P2 = 0xfe;
+  32   3            for(i = 0;i < 7;i++)
+  33   3            {
+  34   4              P2 =P2<<1 ;
+  35   4              Delay(200);
+  36   4            }
+  37   3            Delay(5000);
+  38   3          }
+  39   2        }
+  40   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     82    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      6       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

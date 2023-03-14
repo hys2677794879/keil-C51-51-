@@ -1,0 +1,3 @@
+".\Objects\main.obj" 
+TO ".\Objects\整合版" 
+PRINT(".\Listings\整合版.m51")

@@ -1,0 +1,59 @@
+C51 COMPILER V9.54   MAIN                                                                  02/26/2023 13:31:03 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.l
+                    -st) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<REGX52.H>
+   2          #include<INTRINS.H>
+   3          
+   4          void Delay(unsigned int x)    //@11.0592MHz
+   5          {
+   6   1        unsigned char i, j;
+   7   1      
+   8   1        _nop_();
+   9   1        i = 2;
+  10   1        j = 199;
+  11   1        do
+  12   1        {
+  13   2          while (--j);
+  14   2        } while (--i);
+  15   1      }
+*** WARNING C280 IN LINE 4 OF main.c: 'x': unreferenced local variable
+  16          
+  17          int i = 0;
+  18          int num1 = 0;
+  19          int num2 = 1000;
+  20          
+  21          void main()
+  22          {
+  23   1            if (P3_1 == 0)
+  24   1          {
+  25   2            Delay(20);
+  26   2            while(P3_1 == 0);
+  27   2            Delay(20);
+  28   2            
+  29   2            
+  30   2            P2 = 0xfe;
+  31   2            
+  32   2          }
+  33   1      
+  34   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     38    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      6       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

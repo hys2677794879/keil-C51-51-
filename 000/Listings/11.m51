@@ -1,0 +1,110 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        02/26/2023  01:10:57  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\11 PRINT (.\Listings\11.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  D:\KEIL5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\11 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0006H     UNIT         ?DT?MAIN
+            DATA    000EH     0002H     UNIT         _DATA_GROUP_
+            IDATA   0010H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     0045H     UNIT         ?PR?MAIN?MAIN
+            CODE    00D4H     000DH     UNIT         ?PR?_DELAY?MAIN
+            CODE    00E1H     000DH     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\11 (MAIN)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                  -----    -----
+  +--> ?PR?_DELAY?MAIN
+
+?PR?_DELAY?MAIN                000EH    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\11 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+BL51 BANKED LINKER/LOCATER V6.22                                                      02/26/2023  01:10:57  PAGE 2
+
+
+  D:00A0H         PUBLIC        P2
+  D:0008H         PUBLIC        num1
+  D:000AH         PUBLIC        num2
+  B:00B0H.1       PUBLIC        P3_1
+  C:008FH         PUBLIC        main
+  D:000CH         PUBLIC        i
+  C:00D4H         PUBLIC        _Delay
+  -------         PROC          _DELAY
+  D:000EH         SYMBOL        xms
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:00D4H         LINE#         4
+  C:00D8H         LINE#         5
+  C:00D8H         LINE#         8
+  C:00DAH         LINE#         9
+  C:00DCH         LINE#         11
+  C:00DCH         LINE#         12
+  C:00DEH         LINE#         13
+  C:00E0H         LINE#         14
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  C:008FH         LINE#         20
+  C:008FH         LINE#         21
+  C:008FH         LINE#         22
+  C:008FH         LINE#         23
+  C:008FH         LINE#         24
+  C:0092H         LINE#         25
+  C:0092H         LINE#         26
+  C:0099H         LINE#         27
+  C:009CH         LINE#         28
+  C:00A3H         LINE#         31
+  C:00A6H         LINE#         32
+  C:00ABH         LINE#         33
+  C:00ABH         LINE#         34
+  C:00B1H         LINE#         35
+  C:00B8H         LINE#         36
+  C:00CBH         LINE#         37
+  C:00D2H         LINE#         38
+  C:00D2H         LINE#         39
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+Program Size: data=17.0 xdata=0 code=238
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
